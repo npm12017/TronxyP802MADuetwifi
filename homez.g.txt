@@ -1,0 +1,11 @@
+; Z homing file for Prusa i3 or similar printer using a Z probe for Z homing
+G91
+G1 Z5 F200
+G90
+G1 X100 Y100 F9000
+G91                ; relative mode
+G1 Z-200 S1 F100   ; move Z down until the switch triggers
+G90                ; back to absolute mode
+G92 Z0.3           ; tell the firmware that we are at Z=0.3mm
+; Un-comment the following line if you want the head to actually move to Z=0 after homing
+;G1 Z0 F200
