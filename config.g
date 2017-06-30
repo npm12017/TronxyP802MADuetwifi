@@ -13,8 +13,8 @@ M208 X200 Y200 Z180 S0 ; Set axis maxima
 
 ; Communication and general
 M111 S0                            		; Debug off
-M550 PNM					; Machine name and Netbios name (can be anything you like)
-M551 Pace4ic47f                   			; Machine password (used for FTP)
+M550 P..					; Machine name and Netbios name (can be anything you like)
+M551 P...                  			; Machine password (used for FTP)
 ;*** If you have more than one Duet on your network, they must all have different MAC addresses, so change the last digits
 M540 P0xBE:0xEF:0xDE:0xAD:0xFE:0xED		; MAC Address
 
@@ -22,9 +22,9 @@ M540 P0xBE:0xEF:0xDE:0xAD:0xFE:0xED		; MAC Address
 M552 S1						; Turn network on
 
 ;*** Ethernet networking: Adjust the IP address and gateway in the following 2 lines to suit your network
-M552 P192.168.1.14				; (0 = DHCP)
-M554 P192.168.1.255				; Gateway
-M553 P255.255.255.0				; Netmask
+M552 .....				; (0 = DHCP)
+M554 .....				; Gateway
+M553 .....				; Netmask
 
 ; Endstops
 M574 Z1 S0 ; Define active low and unused microswitches
